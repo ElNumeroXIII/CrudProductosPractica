@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "172728560504",
+    "project_id": "chateador-aeb5a",
+    "storage_bucket": "chateador-aeb5a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172728560504:android:24d794daf0a0949f14b68d",
+        "android_client_info": {
+          "package_name": "com.example.crudproductospractica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172728560504-0m1l4a8ujfiur8a1k4a4t385m1japl6g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.crudproductospractica",
+            "certificate_hash": "62c943e74c65e70125932dca2cd0fa100b2ddba4"
+          }
+        },
+        {
+          "client_id": "172728560504-35bmgqb7pu7u01vl8mnekikmgd528fk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8oFDmK3qBdYDZQ8GnkxaLPfMuSiOjd9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172728560504-35bmgqb7pu7u01vl8mnekikmgd528fk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -14,8 +14,8 @@
         android:textSize="16sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btnEdit"
-        app:layout_constraintHorizontalBias="0" />
+        app:layout_constraintEnd_toStartOf="@id/btnEdit"/>
+       <!-- app:layout_constraintHorizontalBias="0" -->
 
     <TextView
         android:id="@+id/tvDescripcion"

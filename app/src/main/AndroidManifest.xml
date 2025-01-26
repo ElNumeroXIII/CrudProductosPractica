@@ -14,10 +14,8 @@
         tools:targetApi="31" >
         <activity
             android:name=".Login"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" >
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,11 +23,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".MainActivity"
+            android:exported="false" >
+
+        </activity>
+        <activity
             android:name=".AddActivity"
             android:exported="false" />
-        <activity
-            android:name=".ArticuloViewHolder"
-            android:exported="false" />
+
     </application>
 
 </manifest>

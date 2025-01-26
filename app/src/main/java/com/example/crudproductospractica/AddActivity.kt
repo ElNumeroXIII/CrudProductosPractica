@@ -7,6 +7,8 @@ import com.example.crudproductospractica.databinding.ActivityAddBinding
 import com.example.crudproductospractica.models.Articulo
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class AddActivity : AppCompatActivity() {
 
@@ -69,17 +71,27 @@ class AddActivity : AppCompatActivity() {
     }
 
     private fun guardarArticulo() {
+
+        val database = Firebase.database
+        val refProductos = database.getReference("productos")
+
+        val productoId = refProductos.push().key
         val nombre = binding.etNombre.text.toString().trim()
         val descripcion = binding.etDescripcion.text.toString().trim()
-        val precio = binding.etPrecio.text.toString().toFloat()
+        val precio = binding.etPrecio.text.toString().toDouble()
 
-        val nuevoArticulo = Articulo(nombre, descripcion, precio)
+        val nuevoArticulo = Articulo(productoId.toString(), nombre, descripcion, precio)
 
-        database.child(nombre).setValue(nuevoArticulo).addOnSuccessListener {
-            Toast.makeText(this, "Artículo guardado con éxito", Toast.LENGTH_SHORT).show()
-            finish()
-        }.addOnFailureListener {
-            Toast.makeText(this, "Error al guardar el artículo", Toast.LENGTH_SHORT).show()
+        productoId?.let {
+            refProductos.child(it).setValue(nuevoArticulo)
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Artículo guardado con éxito", Toast.LENGTH_SHORT).show()
+                    finish()
+                }
+                .addOnFailureListener { error ->
+                    Toast.makeText(this, "Error al guardar el artículo", Toast.LENGTH_SHORT).show()
+
+                }
         }
     }
 }

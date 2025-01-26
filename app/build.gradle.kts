@@ -1,16 +1,18 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.application")
+
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.example.crudproductospractica"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.crudproductospractica"
-        minSdk = 29
-        targetSdk = 34
+        minSdk = 26
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -37,19 +39,22 @@ android {
     viewBinding {
         enable = true
     }
+    buildToolsVersion = "35.0.0"
 
 }
 
 dependencies {
 
-    implementation("com.google.android.gms:play-services-auth:21.3.0")
+    implementation(libs.firebase.bom)
+    implementation(libs.play.services.auth)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.constraintlayout.v214)
     implementation(libs.firebase.database.ktx)
     implementation(libs.firebase.auth.ktx)
+    
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

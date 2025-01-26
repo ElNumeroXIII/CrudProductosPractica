@@ -15,9 +15,9 @@
         android:inputType="text"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginBottom="8dp" />
-
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <!-- app:layout_constraintMarginBottom="8dp" -->
+    />
     <EditText
         android:id="@+id/etDescripcion"
         android:layout_width="0dp"
@@ -26,8 +26,8 @@
         android:inputType="text"
         app:layout_constraintTop_toBottomOf="@id/etNombre"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginBottom="8dp" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+       <!-- app:layout_constraintMarginBottom="8dp" -->
 
     <EditText
         android:id="@+id/etPrecio"
@@ -37,26 +37,26 @@
         android:inputType="numberDecimal"
         app:layout_constraintTop_toBottomOf="@id/etDescripcion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginBottom="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <!-- app:layout_constraintMarginBottom="16dp"-->
 
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Añadir"
-        app:layout_constraintTop_toBottomOf="@id/etPrecio"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+ <Button
+     android:id="@+id/btnAdd"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:text="Añadir"
+     app:layout_constraintTop_toBottomOf="@id/etPrecio"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/btnCancelar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Cancelar"
-        app:layout_constraintTop_toBottomOf="@id/btnAdd"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="8dp" />
+ <Button
+     android:id="@+id/btnCancelar"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:text="Cancelar"
+     app:layout_constraintTop_toBottomOf="@id/btnAdd"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"/>
+    <!-- app:layout_constraintMarginBottom="8dp" -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
